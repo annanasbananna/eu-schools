@@ -366,16 +366,14 @@ i need friends im so desprate -->
     </div> <!-- End main-content -->
 
     <script>
-        // Entrance animation
-        window.addEventListener('load', function() {
+        // Simple 5-second entrance timer - no waiting for anything
+        setTimeout(function() {
+            const entranceScreen = document.getElementById('entranceScreen');
+            entranceScreen.style.transform = 'translateY(-100%)';
             setTimeout(function() {
-                const entranceScreen = document.getElementById('entranceScreen');
-                entranceScreen.style.transform = 'translateY(-100%)';
-                setTimeout(function() {
-                    entranceScreen.style.display = 'none';
-                }, 1500); // Wait for smooth transition to complete
-            }, 3000); // Show entrance for 3 seconds
-        });
+                entranceScreen.style.display = 'none';
+            }, 1500);
+        }, 5000);
     </script>
 </body>
 
